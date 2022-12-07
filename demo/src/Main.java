@@ -23,6 +23,9 @@ public class Main {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
         Team <FootballPlayer> adelaideCrows = new Team<FootballPlayer>("Adelaide Crows");
+        Team <FootballPlayer> melbourne = new Team<FootballPlayer>("Melbourne");
+        Team <FootballPlayer> fremantle = new Team<FootballPlayer>("Fremantle");
+        Team <FootballPlayer> hawthorne = new Team<FootballPlayer>("Hawthorne");
         adelaideCrows.addPlayer(joe);
 
         System.out.println(adelaideCrows.numPlayers());
@@ -30,5 +33,11 @@ public class Main {
         baseballTeam.addPlayer(pat);
         Team<SoccerPlayer> soccerTeam = new Team<SoccerPlayer>("");
         soccerTeam.addPlayer(beckham);
+
+        System.out.println("Rankings: ");
+        System.out.println(adelaideCrows.getName()+": "+ adelaideCrows.ranking());
+        System.out.println(melbourne.getName()+": "+melbourne.ranking());
+        System.out.println(fremantle.getName()+": "+fremantle.ranking());
+        System.out.println(hawthorne.getName()+": "+hawthorne.ranking());
     }
 }
