@@ -22,10 +22,13 @@ public class Main {
         FootballPlayer joe= new FootballPlayer("Joe");
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
-        Team adelaideCrows = new Team("Adelaide Crows");
+        Team <FootballPlayer> adelaideCrows = new Team<FootballPlayer>("Adelaide Crows");
         adelaideCrows.addPlayer(joe);
-        adelaideCrows.addPlayer(pat);
-        adelaideCrows.addPlayer(beckham);
+
         System.out.println(adelaideCrows.numPlayers());
+        Team<BaseballPlayer> baseballTeam = new Team<BaseballPlayer>("Chicago Cubs");
+        baseballTeam.addPlayer(pat);
+        Team<SoccerPlayer> soccerTeam = new Team<SoccerPlayer>("");
+        soccerTeam.addPlayer(beckham);
     }
 }
